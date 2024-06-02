@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameDisplay"
-    android:background="#F8F7F2">
+    android:background="#462255">
 
     <TextView
         android:id="@+id/player_display"
@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
         android:textSize="25sp"
+        android:textColor="#A1CCA5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,28 +32,32 @@
         <Button
             android:id="@+id/play_again"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:background="@drawable/red_button"
+            android:layout_height="60dp"
+            android:background="@drawable/button_color2"
             android:onClick="playAgainButtonClick"
             android:text="@string/PlayAgainButton"
+            android:textColor="#FAEDCA"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/home_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/home_button"
             android:layout_width="150dp"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_marginStart="20dp"
-            android:background="@drawable/blue_button"
+            android:background="@drawable/button_color1"
             android:onClick="homeButtonClick"
             android:text="@string/HomeButton"
+            android:textColor="#FAEDCA"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/play_again"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <quannt.tictactoe.TicTacToeBoard
@@ -61,10 +66,15 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        custom:boardColor="#000000"
-        custom:XColor="#FF0000"
-        custom:OColor="#0000FF"
-        custom:WinningLineColor="#00FF00"/>
+        app:layout_constraintVertical_bias="0.473"
+        custom:OColor="#90645A"
+        custom:XColor="#DCAE96"
+        custom:boardColor="#F69E78"
+        custom:boardSize="370dp"
+        custom:cellBorderColor="#F69E78"
+        custom:cellBorderWidth="5sp"
+        custom:cornerRadius="50dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
