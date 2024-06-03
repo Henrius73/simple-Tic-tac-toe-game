@@ -25,6 +25,7 @@ class TicTacToeBoard extends View {
     private final GameLogic game;
     private int cellSize = getWidth() / 3;
     private final Paint paint = new Paint();
+    private boolean gameOver = false;
 
     public TicTacToeBoard(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -67,6 +68,8 @@ class TicTacToeBoard extends View {
     @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if (gameOver) return false;
+
         float x = event.getX();
         float y = event.getY();
 
@@ -80,6 +83,7 @@ class TicTacToeBoard extends View {
                     invalidate();
 
                     if (game.winnerCheck()) {
+                        gameOver = true;
                         invalidate();
                     }
                     if (game.getPlayer() % 2 == 0) {
@@ -163,5 +167,6 @@ class TicTacToeBoard extends View {
 
     public void resetGame() {
         game.resetGame();
+        gameOver = false;
     }
 }

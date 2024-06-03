@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GameDisplay"
-    android:background="#462255">
+    android:background="#FCEFEF">
 
     <TextView
         android:id="@+id/player_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:textSize="25sp"
-        android:textColor="#A1CCA5"
+        android:textSize="30sp"
+        android:textColor="#373737"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,9 +72,9 @@
         app:layout_constraintVertical_bias="0.473"
         custom:OColor="#90645A"
         custom:XColor="#DCAE96"
-        custom:boardColor="#F69E78"
+        custom:boardColor="#C2AFF0"
         custom:boardSize="370dp"
-        custom:cellBorderColor="#F69E78"
+        custom:cellBorderColor="#C2AFF0"
         custom:cellBorderWidth="5sp"
         custom:cornerRadius="50dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

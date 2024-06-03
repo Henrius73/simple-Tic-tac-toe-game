@@ -53,7 +53,7 @@ class GameLogic {
                 isWinner = true;
             }
         }
-        //Kiểm tra điều kiện thắng chéo
+        //Kiểm tra điều kiện thắng chéo(
         if(gameBoard[0][0] == gameBoard[1][1] && gameBoard[0][0] == gameBoard[2][2] && gameBoard[0][0] != 0){
             winType = new int[]{0, 2, 3};
             isWinner = true;
@@ -62,7 +62,7 @@ class GameLogic {
             winType = new int[]{2, 2, 4};
             isWinner = true;
         }
-
+        //)
         int boardFilled = 0;
         for(int r=0; r<3; r++){
             for(int c=0; c<3; c++){
