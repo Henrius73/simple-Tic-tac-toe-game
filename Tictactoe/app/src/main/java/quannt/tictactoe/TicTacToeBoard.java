@@ -75,13 +75,11 @@ class TicTacToeBoard extends View {
         if (action == MotionEvent.ACTION_DOWN) {
             int row = (int) Math.ceil(y / cellSize);
             int col = (int) Math.ceil(x / cellSize);
-//            if (!winningLine)
             {
                 if (game.updateGameBoard(row, col)) {
                     invalidate();
 
                     if (game.winnerCheck()) {
-//                        winningLine = true;
                         invalidate();
                     }
                     if (game.getPlayer() % 2 == 0) {
@@ -165,6 +163,5 @@ class TicTacToeBoard extends View {
 
     public void resetGame() {
         game.resetGame();
-//        winningLine = false;
     }
 }
